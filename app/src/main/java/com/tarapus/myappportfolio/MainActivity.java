@@ -5,70 +5,70 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn_movies = (Button) findViewById(R.id.button);
+        Button btn_movies = (Button) findViewById(R.id.btn_movies);
         btn_movies.setBackgroundColor(getResources().getColor(R.color.orange));
-        btn_movies.setOnClickListener(new View.OnClickListener() {
+        btn_movies.setOnClickListener(this);
 
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will Launch my Movie App!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Button btn_scores = (Button) findViewById(R.id.button2);
+        Button btn_scores = (Button) findViewById(R.id.btn_scores);
         btn_scores.setBackgroundColor(getResources().getColor(R.color.orange));
-        btn_scores.setOnClickListener(new View.OnClickListener() {
+        btn_scores.setOnClickListener(this);
 
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will Launch my Scores App!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Button btn_library = (Button) findViewById(R.id.button3);
+        Button btn_library = (Button) findViewById(R.id.btn_library);
         btn_library.setBackgroundColor(getResources().getColor(R.color.orange));
-        btn_library.setOnClickListener(new View.OnClickListener() {
+        btn_library.setOnClickListener(this);
 
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will Launch my Library App!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Button btn_bigger = (Button) findViewById(R.id.button4);
+        Button btn_bigger = (Button) findViewById(R.id.btn_bigger);
         btn_bigger.setBackgroundColor(getResources().getColor(R.color.orange));
-        btn_bigger.setOnClickListener(new View.OnClickListener() {
+        btn_bigger.setOnClickListener(this);
 
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will Launch my Build it Bigger App!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Button btn_xyz = (Button) findViewById(R.id.button5);
+        Button btn_xyz = (Button) findViewById(R.id.btn_xyz);
         btn_xyz.setBackgroundColor(getResources().getColor(R.color.orange));
-        btn_xyz.setOnClickListener(new View.OnClickListener() {
+        btn_xyz.setOnClickListener(this);
 
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "This button will Launch my XYZ Reader App!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Button btn_capstone = (Button) findViewById(R.id.button6);
+        Button btn_capstone = (Button) findViewById(R.id.btn_capstone);
         btn_capstone.setBackgroundColor(getResources().getColor(R.color.red));
-        btn_capstone.setOnClickListener(new View.OnClickListener() {
+        btn_capstone.setOnClickListener(this);
+    }
 
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+            case R.id.btn_movies:
+                Toast.makeText(getApplicationContext(), "This button will Launch my Movie App!", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn_scores:
+                Toast.makeText(getApplicationContext(), "This button will Launch my Scores App!", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn_library:
+                Toast.makeText(getApplicationContext(), "This button will Launch my Library App!", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn_bigger:
+                Toast.makeText(getApplicationContext(), "This button will Launch my Build it Bigger App!", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn_xyz:
+                Toast.makeText(getApplicationContext(), "This button will Launch my XYZ Reader App!", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn_capstone:
                 Toast.makeText(getApplicationContext(), "This button will Launch my Capstone App!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
+                break;
+        }
     }
 
     @Override
@@ -93,3 +93,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

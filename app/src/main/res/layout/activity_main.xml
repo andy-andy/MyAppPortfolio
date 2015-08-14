@@ -18,7 +18,7 @@
         android:layout_height="70dp"
         android:text="Popular Movies"
         android:textSize="20dp"
-        android:id="@+id/button"
+        android:id="@+id/btn_movies"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"/>
@@ -28,9 +28,9 @@
         android:layout_height="70dp"
         android:text="Scores App"
         android:textSize="20dp"
-        android:id="@+id/button2"
+        android:id="@+id/btn_scores"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/btn_movies"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -38,9 +38,9 @@
         android:layout_height="70dp"
         android:text="Library App"
         android:textSize="20dp"
-        android:id="@+id/button3"
+        android:id="@+id/btn_library"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/btn_scores"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -48,9 +48,9 @@
         android:layout_height="70dp"
         android:text="Build it Bigger"
         android:textSize="20dp"
-        android:id="@+id/button4"
+        android:id="@+id/btn_bigger"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/button3"
+        android:layout_below="@+id/btn_library"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -58,9 +58,9 @@
         android:layout_height="70dp"
         android:text="XYZ Reader"
         android:textSize="20dp"
-        android:id="@+id/button5"
+        android:id="@+id/btn_xyz"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/button4"
+        android:layout_below="@+id/btn_bigger"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -68,9 +68,9 @@
         android:layout_height="70dp"
         android:text="Capstone: My own App"
         android:textSize="20dp"
-        android:id="@+id/button6"
+        android:id="@+id/btn_capstone"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/button5"
+        android:layout_below="@+id/btn_xyz"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
